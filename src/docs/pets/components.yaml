@@ -1,0 +1,63 @@
+components:
+  schemas:
+    Pets:
+      type: array
+      item:
+        properties:
+          _id: 
+            type: ObjectId
+            description: Id de la mascota
+          name:
+            type: string
+            description: Nombre de la mascota
+          specie:
+            type: string
+            description: Especie de la mascota
+          owner:
+            type: ObjectId
+            description: Id del adoptante
+          birthDate: 
+            type: string
+            description: Fecha de nacimiento
+          adopted:
+            type: boolean
+            description: Adoptado o no
+          image:
+            type: string
+            description: Imagen de la mascota
+      example:
+        _id: 5f7e9f9b5f7e9f9b5f7e9f9b
+        name: Pet 1
+        specie: Dog
+        adopted: false
+        owner: 5f7e9f9b5f7e9f9b5f7e9f9b
+        image: https://cdn.pixabay.com/photo/2017/02/12/21/27/dog-2061572_1280.jpg
+        birthDate: 12-30-2000  
+  requestBody:
+    petBody:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Nombre del pet
+        specie:
+          type: string
+          description: Especie del pet
+        adopted:
+          type: boolean
+          description: Adoptado o no
+        owner:
+          type: ObjectId
+          description: Id del dueño
+        image:
+          type: string
+          description: Imagen del pet
+        birthDate:
+            type: string
+            description: Fecha de nacimiento
+      example:
+        name: Pet 1
+        specie: Dog
+        birthDate: 12-30-2000
+        adopted: false
+        

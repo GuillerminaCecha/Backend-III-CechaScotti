@@ -1,0 +1,17 @@
+paths:
+    /api/users/{uid}:
+        delete:
+            summary: Eliminar usuario
+            description: Delete a user
+            tags:
+                - Users
+            parameters:
+                - in: path
+                  name: uid
+                  required: true
+                  description: Id user
+                  schema:
+                      type: string
+            responses:
+                200:
+                    description: Delete user

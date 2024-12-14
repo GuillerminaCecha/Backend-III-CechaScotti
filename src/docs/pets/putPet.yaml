@@ -1,0 +1,28 @@
+paths:
+  /api/pets/{pid}:
+    put:
+      summary: Actualizar mascota
+      description: Update a pet
+      tags:
+        - Pets
+      parameters:
+        - in: path
+          name: pid
+          required: true
+          description: Id pet
+          schema:
+            type: string
+      requestBody:
+        required: true
+        description: Pet data
+        content:
+            application/json:
+              schema:
+                $ref: "#/components/requestBody/petBody"
+      responses:
+        200:
+          description: Update pet
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Pets"

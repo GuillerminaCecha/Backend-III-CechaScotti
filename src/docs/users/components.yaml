@@ -1,0 +1,74 @@
+components:
+    schemas:
+        Users:
+            type: array
+            item:
+                properties:
+                    _id:
+                        type: ObjectId
+                        description: Id del User
+                    first_name:
+                        type: string
+                        description: Nombre del User
+                    last_name:
+                        type: string
+                        description: Apellido del User
+                    email:
+                        type: string
+                        description: Email del User
+                    password:
+                        type: string
+                        description: Password del User
+                    role:
+                        type: string
+                        description: Rol del User
+                    Pets:
+                        type: array
+                        description: Pets del User
+                        item:
+                            properties:
+                                pet:
+                                    type: ObjectId
+                                    description: Id del pet
+            example:
+                _id: 5f7e9f9b5f7e9f9b5f7e9f9b
+                first_name: User 1
+                last_name: Apellido 1
+                email: user@gmail.com
+                password: Guillermina123
+                role: user
+                pets: [{ pet: 5f7e9f9b5f7e9f9b5f7e9f9b }]
+    requestBody:
+        userBody:
+            type: object
+            properties:
+                first_name:
+                    type: string
+                    description: Nombre del user
+                last_name:
+                    type: string
+                    description: Apellido del user
+                email:
+                    type: string
+                    description: Email del user
+                password:
+                    type: string
+                    description: Pass del user
+                role:
+                    type: string
+                    description: Rol del user
+                Pets:
+                    type: array
+                    description: Pets del User
+                    item:
+                        properties:
+                            pet:
+                                type: ObjectId
+                                description: Id del pet
+            example:
+                first_name: User 1
+                last_name: Apellido 1
+                email: user@gmail.com
+                password: Guillermina123
+                role: user
+                pets: [{ pet: 5f7e9f9b5f7e9f9b5f7e9f9b }]

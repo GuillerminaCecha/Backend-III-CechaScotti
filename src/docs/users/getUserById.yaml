@@ -1,0 +1,21 @@
+paths:
+    /api/users/{uid}:
+        get:
+            summary: Obtener usuario por id
+            description: Get user by id
+            tags:
+                - Users
+            parameters:
+                - in: path
+                  name: uid
+                  required: true
+                  description: Id user
+                  schema:
+                      type: string
+            responses:
+                200:
+                    description: Retorna un user por ID
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/users'

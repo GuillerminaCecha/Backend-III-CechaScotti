@@ -1,0 +1,21 @@
+paths:
+    /api/pets/{pid}:
+        get:
+            summary: Obtener mascota por id
+            description: Get pet by id
+            tags:
+                - Pets
+            parameters:
+                - in: path
+                  name: pid
+                  required: true
+                  description: Id pet
+                  schema:
+                      type: string
+            responses:
+                200:
+                    description: Retorna una mascota por ID
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Pets'

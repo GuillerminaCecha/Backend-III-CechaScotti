@@ -1,0 +1,14 @@
+paths:
+    /api/users:
+        get:
+            summary: Obtener todas los usuarios
+            description: Get all users
+            tags:
+                - Users
+            responses:
+                200:
+                    description: Retorna un array de mascotas
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/users'

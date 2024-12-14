@@ -1,0 +1,14 @@
+paths:
+    /api/pets:
+        get:
+            summary: Obtener todas las mascota
+            description: Get all pets
+            tags:
+                - Pets
+            responses:
+                200:
+                    description: Retorna un array de mascotas
+                    content:
+                        application/json:
+                            schema:
+                                $ref: '#/components/schemas/Pets'

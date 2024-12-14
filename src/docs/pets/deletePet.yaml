@@ -1,0 +1,17 @@
+paths:
+  /api/pets/{pid}:
+    delete:
+      summary: Eliminar mascota
+      description: Delete a pet
+      tags:
+        - Pets
+      parameters:
+        - in: path
+          name: pid
+          required: true
+          description: Id pet
+          schema:
+            type: string
+      responses:
+        200:
+          description: Delete pet
